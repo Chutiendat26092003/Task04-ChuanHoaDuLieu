@@ -109,9 +109,6 @@ where ProductID in
 alter table OrderDetails
     add SumOrder money
 
-alter table OrderDetails
-    drop column SumOrder
-
 select Price*Quantity, sum(SumOrder) [SumOrder]
 from OrderDetails
 group by Price, Quantity
